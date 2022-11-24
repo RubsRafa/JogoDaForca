@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="jogo">
       <Jogo />
-      <Letras />
+      <Letras palavras={palavras} />
       <Chute />
     </div>
   );
