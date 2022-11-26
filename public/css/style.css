@@ -46,6 +46,11 @@
     height: 3px;
     background-color: #000000;
 }
+.palavrasecreta {
+    font-size: 50px;
+    font-weight: 700;
+    font-family: Noto Sans, sans-serif;
+}
 .letras {
     width: 640px;
     height: 100px;
