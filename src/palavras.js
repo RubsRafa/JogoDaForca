@@ -15,7 +15,7 @@
         "ovo", "ostra", "obstetra", "orangotango", "olhar", "ortodoxo", "ouro", "ornamento",
         "pato", "polvo", "povoar", "pano", "princesa", "pizza", "patroa",
         "queijo", "quitanda", "quinta", "quantia", "quarentena", "quadrilha", "quaresma", "quartzo", "quebrar",
-        "risada", "rio", "remar", "rato", "racional", "rainha", "radioatividade", "raiz", "raiva", "rachadura",
+        "risada", "rio", "remar", "rato", "racional", "rainha", "radioatividade", "raiz", "raiva", "rachadura", "rubilubilis",
         "salada", "salamandra", "sacola", "siri", "sabre", "sucarose", "sabedoria", "sacerdote",
         "tatu", "tabacaria", "taberneiro", "torrada", "tamanho", "tatuagem", "trem",
         "uva", "universo", "unanimidade", "ubuntu", "universidade", "urso", "uivar", "unir",
