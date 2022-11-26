@@ -1,41 +1,23 @@
 
-// export default function Jogo({palavras, palavra, setPalavra, imagem, setImagem, esconderPalavra, setEsconderPalavra, formandoPalavra}) {
-//     let embaralhar = palavras;
-//     embaralhar.sort (misturar)
-//     console.log (formandoPalavra)
+export default function Jogo({imagem, escolherPalavra, palavra, corLose, corWin, formandoPalavra, addTracos}) {
 
-//     function misturar () {
-//         return Math.random() - 0.5
-//     }
+    return (
+        <div className="visual">
+                <div className="forca">
+                    <img data-test="game-image" src={imagem} />
+                </div>
 
-//     function escolherPalavra () {
-//         setImagem ("./assets/forca0.png")
-//         setPalavra (embaralhar[0])
-//         let addTracos = '';
+                <div className="conteudo">
+                    <div data-test="choose-word" onClick={escolherPalavra} className='palavra'>
+                        <h1>Escolher palavra</h1>
+                    </div>
+                    <div className="tracos">
+                        <h1 data-test="word" data-answer={palavra} className={`palavrasecreta ${corLose ? 'red' : ''} ${corWin ? 'green' : ''}`}>{!formandoPalavra ? addTracos : formandoPalavra}
 
-//         for (let i = 0; i < palavra.length; i++) {
-//             addTracos += '_ ';
-//         }
-//         setEsconderPalavra (addTracos)
-//     }
-
-//     return (
-//         <div className="visual">
-//             <div className="forca">
-//                 <img src={imagem} />
-//             </div>
-
-//             <div className="conteudo">
-//                 <div onClick={escolherPalavra} className='palavra'>
-//                     <h1>Escolher palavra</h1>
-//                 </div>
-//                 <div className="tracos">
-//                     <h1 className="palavrasecreta">{esconderPalavra}
-                        
-//                         {/* <div className="traco"></div> */}
-//                     </h1>
-//                 </div>
-//             </div>
-//         </div>
-//     )
-// }
+                            {/* <div className="traco"></div> */}
+                        </h1>
+                    </div>
+                </div>
+            </div>
+    )
+}

@@ -1,6 +1,6 @@
 import Chute from "./componentes/Chute";
-// import Jogo from "./componentes/Jogo";
-// import Letras from "./componentes/Letras";
+import Jogo from "./componentes/Jogo";
+import Letras from "./componentes/Letras";
 import Palavras from "./palavras"
 import { useState } from "react";
 import forca0 from '../src/assets/forca0.png'
@@ -147,7 +147,7 @@ function App() {
             setFormandoPalavra(palavra)
             setCorLose(true);
             setIniciar(false)
-            setImagem (forca6)
+            setImagem(forca6)
         }
     }
 
@@ -156,41 +156,9 @@ function App() {
 
     return (
         <div className="jogo">
-            <div className="visual">
-                <div className="forca">
-                    <img data-test="game-image" src={imagem} />
-                </div>
-
-                <div className="conteudo">
-                    <div data-test="choose-word" onClick={escolherPalavra} className='palavra'>
-                        <h1>Escolher palavra</h1>
-                    </div>
-                    <div className="tracos">
-                        <h1 data-test="word" data-answer={palavra} className={`palavrasecreta ${corLose ? 'red' : ''} ${corWin ? 'green' : ''}`}>{!formandoPalavra ? addTracos : formandoPalavra}
-
-                            {/* <div className="traco"></div> */}
-                        </h1>
-                    </div>
-                </div>
-            </div>
-
-
-            <div className="letras">
-                {alfabeto.map((letra) => <div data-test="letter" onClick={() => clicarLetra(letra)} className='letra'>{letra.toUpperCase()}
-                    <div className={`esconder-letra ${selecionados.includes(letra) || !iniciar ? '' : 'esconder'}`}></div>
-                </div>)}
-            </div>
-
-
-            {/* <Jogo palavras={Palavras} palavra={palavra} setPalavra={setPalavra} imagem={imagem} setImagem={setImagem} esconderPalavra={esconderPalavra} setEsconderPalavra={setEsconderPalavra} formandoPalavra={formandoPalavra} />
-      <Letras selecionados={selecionados} setSelecionados={setSelecionados} palavra={palavra} formandoPalavra={formandoPalavra} setFormandoPalavra={setFormandoPalavra}/> */}
-            {/* <Chute /> */}
-
-            <div className="tentativas">
-                <h1>Já sei a palavra!</h1>
-                <input data-test="guess-input" onChange={(e) => setChute(e.target.value)} value={chute}></input>
-                <div data-test="guess-button" onClick={() => verificarChute()}>Chutar</div>
-            </div>
+            <Jogo imagem={imagem} escolherPalavra={escolherPalavra} palavra={palavra} corLose={corLose} corWin={corWin} formandoPalavra={formandoPalavra} addTracos={addTracos} /> 
+            <Letras key={clicarLetra} alfabeto={alfabeto} clicarLetra={clicarLetra} selecionados={selecionados} iniciar={iniciar} />
+            <Chute setChute={setChute} chute={chute} verificarChute={verificarChute} /> 
         </div>
     );
 }
