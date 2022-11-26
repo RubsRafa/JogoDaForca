@@ -124,7 +124,7 @@ function App() {
 
 
 
-    function ganhou(array) {
+    function ganhou() {
 
         let conferirPalavra = '';
         for (let i = 0; i < formandoPalavra.length; i++) {
@@ -158,15 +158,15 @@ function App() {
         <div className="jogo">
             <div className="visual">
                 <div className="forca">
-                    <img src={imagem} />
+                    <img data-test="game-image" src={imagem} />
                 </div>
 
                 <div className="conteudo">
-                    <div onClick={escolherPalavra} className='palavra'>
+                    <div data-test="choose-word" onClick={escolherPalavra} className='palavra'>
                         <h1>Escolher palavra</h1>
                     </div>
                     <div className="tracos">
-                        <h1 className={`palavrasecreta ${corLose ? 'red' : ''} ${corWin ? 'green' : ''}`}>{!formandoPalavra ? addTracos : formandoPalavra}
+                        <h1 data-test="word" data-answer={palavra} className={`palavrasecreta ${corLose ? 'red' : ''} ${corWin ? 'green' : ''}`}>{!formandoPalavra ? addTracos : formandoPalavra}
 
                             {/* <div className="traco"></div> */}
                         </h1>
@@ -176,7 +176,7 @@ function App() {
 
 
             <div className="letras">
-                {alfabeto.map((letra) => <div onClick={() => clicarLetra(letra)} className='letra'>{letra.toUpperCase()}
+                {alfabeto.map((letra) => <div data-test="letter" onClick={() => clicarLetra(letra)} className='letra'>{letra.toUpperCase()}
                     <div className={`esconder-letra ${selecionados.includes(letra) || !iniciar ? '' : 'esconder'}`}></div>
                 </div>)}
             </div>
@@ -188,8 +188,8 @@ function App() {
 
             <div className="tentativas">
                 <h1>Já sei a palavra!</h1>
-                <input onChange={(e) => setChute(e.target.value)} value={chute}></input>
-                <div onClick={() => verificarChute()}>Chutar</div>
+                <input data-test="guess-input" onChange={(e) => setChute(e.target.value)} value={chute}></input>
+                <div data-test="guess-button" onClick={() => verificarChute()}>Chutar</div>
             </div>
         </div>
     );

@@ -40,12 +40,6 @@
     display: flex;
     justify-content: flex-end;
 }
-.traco {
-    margin-left: 5px;
-    width: 30px;
-    height: 3px;
-    background-color: #000000;
-}
 .palavrasecreta {
     font-size: 50px;
     font-weight: 700;

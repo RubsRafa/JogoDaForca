@@ -24,12 +24,4 @@
         "zebra", "zagueiro", "zero", "zoeira", "zepelim", "zinco", "zumbido"
     ]
 
-    // let embaralharPalavra = palavras.sort (misturar);
-    // function misturar () {
-    //     return Math.random() - 0.5
-    // }
-
-    // let novaPalavra = embaralharPalavra[0];
-    // console.log (novaPalavra)
-
 export default palavras
