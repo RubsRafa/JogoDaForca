@@ -12,7 +12,7 @@
         "laranja", "lua", "luz", "lindo", "lacraia", "lactose", "lacrar",
         "manga", "morango", "mico", "matar", "mingau", "moqueca", "mocassin",
         "nectarina", "nada", "navio", "namorado", "ninja", "natal", "narciso", "narina", "nabo",
-        "ovo", "ostra", "obstetra", "orangotango", "olhar", "ortodoxo", "ouro", "ornamento", "otorrinolaringologista",
+        "ovo", "ostra", "obstetra", "orangotango", "olhar", "ortodoxo", "ouro", "ornamento",
         "pato", "polvo", "povoar", "pano", "princesa", "pizza", "patroa",
         "queijo", "quitanda", "quinta", "quantia", "quarentena", "quadrilha", "quaresma", "quartzo", "quebrar",
         "risada", "rio", "remar", "rato", "racional", "rainha", "radioatividade", "raiz", "raiva", "rachadura",

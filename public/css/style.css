@@ -75,7 +75,7 @@
     position: absolute;
     top:0;
     right: 0;
-    background-color: rgba(159, 170, 181, 0.7);
+    background-color: rgba(159, 170, 181, 0.6);
 }
 .esconder {
     display: none;

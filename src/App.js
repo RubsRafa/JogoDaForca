@@ -25,6 +25,7 @@ function App() {
     const [corWin, setCorWin] = useState(false)
     const [corLose, setCorLose] = useState(false)
     const [chute, setChute] = useState('');
+    const [disable, setDisable] = useState(true);
 
     let addTracos = '';
     for (let i = 0; i < palavra.length; i++) {
@@ -52,6 +53,7 @@ function App() {
         setQtdErro(0);
         setCorWin(false)
         setCorLose(false)
+        setDisable (false)
     }
 
     const alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
@@ -119,6 +121,7 @@ function App() {
             setFormandoPalavra(palavra)
             setIniciar(false)
             setCorLose(true)
+            setDisable (true)
         }
     }
 
@@ -134,6 +137,7 @@ function App() {
         if (conferirPalavra === palavra) {
             setCorWin(true);
             setIniciar(false)
+            setDisable (true)
         }
     }
 
@@ -143,22 +147,22 @@ function App() {
             setCorWin(true);
             setIniciar(false)
             setFormandoPalavra(palavra)
+            setDisable (true)
         } else {
             setFormandoPalavra(palavra)
             setCorLose(true);
             setIniciar(false)
             setImagem(forca6)
+            setDisable (true)
         }
     }
 
 
-
-
     return (
         <div className="jogo">
-            <Jogo imagem={imagem} escolherPalavra={escolherPalavra} palavra={palavra} corLose={corLose} corWin={corWin} formandoPalavra={formandoPalavra} addTracos={addTracos} /> 
-            <Letras key={clicarLetra} alfabeto={alfabeto} clicarLetra={clicarLetra} selecionados={selecionados} iniciar={iniciar} />
-            <Chute setChute={setChute} chute={chute} verificarChute={verificarChute} /> 
+            <Jogo key={palavra} imagem={imagem} escolherPalavra={escolherPalavra} palavra={palavra} corLose={corLose} corWin={corWin} formandoPalavra={formandoPalavra} addTracos={addTracos} /> 
+            <Letras key={alfabeto} disable={disable} alfabeto={alfabeto} clicarLetra={clicarLetra} selecionados={selecionados} iniciar={iniciar} />
+            <Chute ley={chute} disable={disable} setChute={setChute} chute={chute} verificarChute={verificarChute} /> 
         </div>
     );
 }
