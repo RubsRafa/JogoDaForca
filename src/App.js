@@ -148,7 +148,7 @@ function App() {
 
     function verificarChute() {
 
-        if (chute === palavra) {
+        if (chute.toLowerCase() === palavra) {
             setCorWin(true);
             setIniciar(false)
             setFormandoPalavra(palavra)
