@@ -60,8 +60,10 @@ function App() {
 
 
     function clicarLetra(letraSelecionada) {
+        console.log (letraSelecionada)
         if (!selecionados.includes(letraSelecionada)) {
             setSelecionados([...selecionados, letraSelecionada]);
+            setDisable (true)
         }
 
         if (palavra.includes(letraSelecionada)) {
