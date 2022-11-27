@@ -63,7 +63,10 @@ function App() {
         console.log (letraSelecionada)
         if (!selecionados.includes(letraSelecionada)) {
             setSelecionados([...selecionados, letraSelecionada]);
-            setDisable (true)
+        }
+
+        if (selecionados.includes (letraSelecionada)) {
+            setDisable(true)
         }
 
         if (palavra.includes(letraSelecionada)) {
