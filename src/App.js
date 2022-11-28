@@ -60,7 +60,6 @@ function App() {
 
 
     function clicarLetra(letraSelecionada) {
-        console.log (letraSelecionada)
         if (!selecionados.includes(letraSelecionada)) {
             setSelecionados([...selecionados, letraSelecionada]);
         }
